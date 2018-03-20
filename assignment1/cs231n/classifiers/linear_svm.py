@@ -97,7 +97,7 @@ def svm_loss_vectorized(W, X, y, reg):
     correct_class_scores = scores[np.arange(num_train), y]
     # print(correct_class_scores, correct_class_scores.shape)
 
-    # As we can not use np.arange() because we need to subtract from scores which is 2D
+    # Because we need to subtract from scores which is 2D we can not use np.arange()
     # so we can either reshape and then it will be broadcasted or use np.newaxis()
     # use np.newaxis() to make 1D correct_class_scores become 2D
     margins = np.maximum(0, scores - correct_class_scores.reshape(-1, 1) + delta)
