@@ -4,10 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-# from past.builtins import xrange
-# from cs231n.classifiers.softmax import
-
-
 class TwoLayerNet(object):
     """
   A two-layer fully-connected neural network. The net has an input dimension of
@@ -293,10 +289,6 @@ class TwoLayerNet(object):
         ###########################################################################
         # TODO: Implement this function; it should be VERY simple!                #
         ###########################################################################
-        # Unpack variables from the params dictionary
-        W1, b1 = self.params['W1'], self.params['b1']
-        W2, b2 = self.params['W2'], self.params['b2']
-
         # input layer
         h = X.dot(self.params['W1']) + self.params['b1']
         # ReLU
