@@ -128,7 +128,7 @@ class TwoLayerNet(object):
 
         # To get difference between loss and correct loss be < 1e-12
         # I had to remove multiplier by 0.5 (for L2 regularization trick)
-        reg_loss = reg * np.sum(W1 * W1) + reg * np.sum(W2 * W2)
+        reg_loss = 0.5 * reg * np.sum(W1 * W1) + 0.5 * reg * np.sum(W2 * W2)
 
         loss = data_loss + reg_loss
 
